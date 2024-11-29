@@ -13,7 +13,7 @@ You can download the complete pdf version of my <a href = "https://ismailhatim.g
 Education
 ======
 * MSc in Artificial Intelligence at CentraleSupélec, Gif-sur-Yvette France, 2025 (expected)
-* Engineering M.S specialized in COmputer Science and SYstems at ENSEA, Cergy France, 2023
+* Engineering M.S specialized in Computer Science and SYstems at ENSEA, Cergy France, 2023
 * Preparatory class for the Grande Écoles at Lycée Chaptal - Maths Physics star class, 2019
 
 Academic projects
@@ -58,11 +58,3 @@ Skills
   * Tensorflow, Keras
   * Scipy
 * C, C++
-
-Publications
-======
-* Incoming
-  <!-- <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul> -->
-  
