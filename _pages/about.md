@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-Hi I'm Ismail Hatim currently a Master's student in Artificial Intelligence at CentraleSupélec, I'm actively seeking a research-oriented internship in AI to conclude my studies. 
+Hi, I'm Ismail Hatim, a MSc student in Artificial Intelligence at CentraleSupélec, with a strong passion for advancing the frontiers of AI research. My academic and professional journey has encompassed diverse areas of machine learning and deep learning, with a research project focused on fairness in graph neural networks.
 
-My current focus is on a project related to fairness in graph neural networks, a topic that fascinates me for its potential to make AI more equitable and impactful. Driven by a passion for research. 
+Beyond GNNs, I have cultivated a deep interest in reinforcement learning, machine learning optimization techniques, and the theoretical underpinnings of deep learning architectures. I will soon undertake an internship focused on uncertainty in vision-language models (VLMs), exploring ways to enhance the reliability of AI systems. 
 
-I am also looking to pursue a PhD next year, with the goal of deepening my expertise and contributing to cutting-edge advancements in AI.
+Finally, I aim to pursue a PhD exploring broader areas, including machine learning, deep learning, graph neural networks, and reinforcement learning, to contribute to cutting-edge advancements in AI.
