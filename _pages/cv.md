@@ -32,12 +32,12 @@ Academic projects
 
 Work experience
 ======
-* Starting May 2025 : Research Intern
+<!-- * Starting May 2025 : Research Intern
   * ILLS - International Laboratory on Learning Systems, Montreal, Canada
   * Research on uncertainty in Vision-Language Models:
     * Leveraging probabilistic techniques to model and quantify uncertainty in large-scale, multimodal datasets.
     * Developing and evaluating methodologies for uncertainty-aware VLMs, with high-stakes applications.
-    * Collaborating with researchers at LIVIA and ILLS, in partnership with CNRS, to align the work in uncertainty quantification.
+    * Collaborating with researchers at LIVIA and ILLS, in partnership with CNRS, to align the work in uncertainty quantification. -->
 * February 2023 - September 2024: Business Intelligence Consultant affiliated with various missions
   * POLARYS- Business Intelligence consulting firm, Paris, France
   * Christian DIOR Couture: Tech Lead within an AGILE project for data visualization:
