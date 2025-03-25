@@ -23,8 +23,8 @@ Academic projects
   * Utilized PyTorch Geometric to manage graph data structures and build GNN architectures for tasks such as node classification.
   * Collaborated with CVN and Inria OPIS, with guidance from researchers to align the project in AI ethics and fairness.
 * CentraleSupélec - Research Project: Explainability in AI Models Gif-sur-Yvette, France
-  * Conducted theoretical research focusing on improving interpretability in high-dimensional datasets.
-  * Developed a framework for analyzing feature importance using Shapley values, applied to models in image and text classification tasks.
+  * Designed a framework aiming to enhance interpretability in image classification by decomposing model decisions into spatial attributions.
+  * Applied the method on various vision models (e.g., ResNet, DenseNet) and validated its robustness under common explainability methods.
 * CentraleSupélec - AI Challenge
   * Developed a heuristic AI for a board game implementing algorithms like Alpha-Beta pruning, with potential for more complex strategies.
 * ENSEA - Cross-disciplinary software project 
@@ -32,12 +32,12 @@ Academic projects
 
 Work experience
 ======
-<!-- * Starting May 2025 : Research Intern
-  * ILLS - International Laboratory on Learning Systems, Montreal, Canada
-  * Research on uncertainty in Vision-Language Models:
-    * Leveraging probabilistic techniques to model and quantify uncertainty in large-scale, multimodal datasets.
-    * Developing and evaluating methodologies for uncertainty-aware VLMs, with high-stakes applications.
-    * Collaborating with researchers at LIVIA and ILLS, in partnership with CNRS, to align the work in uncertainty quantification. -->
+* Starting May 2025 : Incoming Research Internship: Graph-based Modeling of Multimodal Epilepsy Patient Data
+  * INRIA - OPIS Team (CVN) in collaboration with Institut Imagine, Gif-sur-Yvette, France
+  * Participation in a research project focused on adapting multimodal medical data. 
+    * Adapting EEG, MRI, clinical annotations into graph structures.
+    * Enable representation learning for epilepsy diagnosis and progression prediction using Graph Neural Networks.
+    * Integration of heterogeneous data modalities and application of state-of-the-art GNN architectures.
 * February 2023 - September 2024: Business Intelligence Consultant affiliated with various missions
   * POLARYS- Business Intelligence consulting firm, Paris, France
   * Christian DIOR Couture: Tech Lead within an AGILE project for data visualization:
