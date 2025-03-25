@@ -28,7 +28,7 @@ Academic projects
 * CentraleSupélec - AI Challenge
   * Developed a heuristic AI for a board game implementing algorithms like Alpha-Beta pruning, with potential for more complex strategies.
 * ENSEA - Cross-disciplinary software project 
-  * Creation of a clone of the "Terraforming Mars" board game in C++, featuring simple, heuristic and advanced AI.
+  * Creation of a clone of the "Terraforming Mars" board game in C++, featuring basic, heuristic, and advanced AI strategies
 
 Work experience
 ======
