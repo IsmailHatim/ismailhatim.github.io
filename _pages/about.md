@@ -7,8 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm Ismail Hatim, a MSc student in Artificial Intelligence at CentraleSupélec, with a strong passion for advancing the frontiers of AI research. My academic and professional journey has encompassed diverse areas of machine learning and deep learning, with a research project focused on fairness in graph neural networks.
-
-Beyond GNNs, I have cultivated a deep interest in reinforcement learning, machine learning optimization techniques, and the theoretical underpinnings of deep learning architectures. 
-
-Finally, I aim to pursue a PhD exploring broader areas, including machine learning, deep learning, graph neural networks, and reinforcement learning, to contribute to cutting-edge advancements in AI.
+Hi, I’m Ismail Hatim, a research engineer at the LIX laboratory (École Polytechnique, Institut Polytechnique de Paris), preparing a PhD under the supervision of Prof. Yanlei Diao starting in January 2026. 
+I recently completed an MSc in Artificial Intelligence at CentraleSupélec, where I worked on fairness in graph generative models and multimodal imputation for electronic health records.
+My current research focuses on GTNmed, a graph transformer–based foundation model for sparse and heterogeneous medical EHR data, at the intersection of graph machine learning, healthcare AI, and data systems. 
+More broadly, I am interested in graph neural networks, foundation models, reinforcement learning, and the optimization and theory underlying modern deep learning architectures.

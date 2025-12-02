@@ -12,7 +12,8 @@ You can download the complete pdf version of my <a href = "https://ismailhatim.g
 
 Education
 ======
-* MSc in Artificial Intelligence at CentraleSupélec, Gif-sur-Yvette France, 2025 (expected)
+* PhD on Graph Foundation Models on Medical Data at École Polytechnique, Palaiseau France, 2026
+* MSc in Artificial Intelligence at CentraleSupélec, Gif-sur-Yvette France, 2025
 * Engineering M.S specialized in Computer Science and SYstems at ENSEA, Cergy France, 2023
 * Preparatory class for the Grande Écoles at Lycée Chaptal - Maths Physics star class, 2019
 
@@ -32,7 +33,9 @@ Academic projects
 
 Work experience
 ======
-* Starting May 2025 : Incoming Research Internship: Graph-based Modeling of Multimodal Epilepsy Patient Data
+* November 2025 - December 2025: Research Engineer: 
+  * LIX - École Polytechnique, INRIA - CEDAR Team: in collaboration with
+* May 2025 - October 2025 : Research Internship: Graph-based Modeling of Multimodal Epilepsy Patient Data
   * INRIA - OPIS Team (CVN) in collaboration with Institut Imagine, Gif-sur-Yvette, France
   * Participation in a research project focused on adapting multimodal medical data. 
     * Adapting EEG, MRI, clinical annotations into graph structures.

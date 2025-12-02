@@ -24,11 +24,11 @@ author:
   avatar           : "profile_new.jpg"
   name             : "Ismail Hatim"
   pronouns         : # example: "she/her"  
-  bio              : "MSc in Artificial Intelligence Student at CentraleSupélec"
-  location         : "Gif-sur-Yvette, France"
-  employer         : "CentraleSupélec"
+  bio              : "PhD Student at École Polytechnique, LIX, Inria."
+  location         : "Palaiseau, France"
+  employer         : "École Polytechnique"
   uri              : # URL
-  email            : "ismail.hatim@student-cs.fr" 
+  email            : "ismail.hatim@lix.polytechnique.fr" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
