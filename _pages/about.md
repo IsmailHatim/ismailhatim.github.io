@@ -15,3 +15,10 @@ My research focuses on *GTNmed*, a graph transformer–based foundation model fo
 Before starting my PhD, I completed an MSc in Artificial Intelligence at **CentraleSupélec**, where I worked on fairness in graph generative models and multimodal imputation for clinical data. 
 
 More broadly, I am interested in graph representation learning, foundation models, reinforcement learning, and the optimization and theoretical principles underlying modern deep learning systems.
+
+
+## News
+
+## Contact
+
+{first-name} dot {last-name}@lix.polytechnique.fr
