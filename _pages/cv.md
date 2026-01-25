@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-You can download the complete pdf version of my <a href = "https://ismailhatim.github.io/files/CV_HATIM_ISMAIL.pdf">CV</a>.
+You can download the complete pdf version of my <a href = "https://ismailhatim.github.io/files/Resume_HATIM_Ismail.pdf">CV</a>.
 
 Education
 ======
