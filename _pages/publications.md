@@ -1,10 +1,9 @@
 ---
-permalink: /
-title: "About Me"
+permalink: /publications/
+title: "Publications"
 author_profile: true
 redirect_from:
-  - /about/
-  - /about.html
+  - /publications.html/
 ---
 
 ## 2026
