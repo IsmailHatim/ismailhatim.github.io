@@ -7,7 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I’m Ismail Hatim, a research engineer at the LIX laboratory (École Polytechnique, Institut Polytechnique de Paris), preparing a PhD under the supervision of Prof. Yanlei Diao starting in January 2026. 
-I recently completed an MSc in Artificial Intelligence at CentraleSupélec, where I worked on fairness in graph generative models and multimodal imputation for electronic health records.
-My current research focuses on GTNmed, a graph transformer–based foundation model for sparse and heterogeneous medical EHR data, at the intersection of graph machine learning, healthcare AI, and data systems. 
-More broadly, I am interested in graph neural networks, foundation models, reinforcement learning, and the optimization and theory underlying modern deep learning architectures.
+Hi, I’m Ismail Hatim, a PhD student at the **École Polytechnique**, within the CEDAR **Inria** team at the LIX laboratory, supervised by [Prof. Yanlei Diao](https://www.lix.polytechnique.fr/~yanlei.diao/), Dr. Benoît Gallix (**American Hospital of Paris**), and **Dr. Guillaume Lachaud**. 
+
+My research focuses on *GTNmed*, a graph transformer–based foundation model for sparse, heterogeneous, and multimodal electronic health records (EHR), at the intersection of graph machine learning, healthcare AI, and data systems.
+
+
+Before starting my PhD, I completed an MSc in Artificial Intelligence at CentraleSupélec, where I worked on fairness in graph generative models and multimodal imputation for clinical data. 
+
+More broadly, I am interested in graph representation learning, foundation models, reinforcement learning, and the optimization and theoretical principles underlying modern deep learning systems.
