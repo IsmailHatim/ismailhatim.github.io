@@ -6,15 +6,6 @@
 (() => {
   "use strict";
 
-  // --- Konami sequence (key codes) ---
-  const KONAMI = [
-    "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
-    "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
-    "b", "a"
-  ];
-
-  let buffer = [];
-
   // --- Node types with colors (GTNmed schema) ---
   const NODE_TYPES = {
     patient:   { color: "#8B5CF6", label: "Patient",   icon: "P" },
@@ -31,32 +22,6 @@
     relational: { color: "#6B7280", label: "Relational", dash: [4, 4] },
     attention:  { color: "#F59E0B", label: "Attention",  dash: [] }
   };
-
-  // Avoid triggering in inputs / textareas
-  function isTypingTarget(el) {
-    if (!el) return false;
-    const tag = el.tagName?.toLowerCase();
-    return tag === "input" || tag === "textarea" || el.isContentEditable;
-  }
-
-  function onKeyDown(e) {
-    if (isTypingTarget(document.activeElement)) return;
-
-    const key = (e.key || "").toLowerCase();
-    const normalized = (e.key.startsWith("Arrow") ? e.key : key);
-
-    buffer.push(normalized);
-    if (buffer.length > KONAMI.length) buffer.shift();
-
-    const match = buffer.every((k, i) => k === KONAMI[i]);
-    if (match) {
-      buffer = [];
-      triggerEasterEgg();
-    }
-
-    // Close with Escape if open
-    if (e.key === "Escape") closeOverlay();
-  }
 
   // --- Overlay creation ---
   const OVERLAY_ID = "ih-easter-overlay";
@@ -796,7 +761,11 @@
     raf = null;
   }
 
-  // Install listener
-  window.addEventListener("keydown", onKeyDown, { passive: true });
+  // Close overlay with Escape key
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeOverlay();
+  }, { passive: true });
+
+  // Expose trigger function globally for footer link
   window.triggerEasterEgg = triggerEasterEgg;
 })();
