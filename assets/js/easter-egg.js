@@ -301,7 +301,7 @@
         <div class="toprow">
           <div>
             <div class="title">GTN<sub>med</sub> Mode Unlocked</div>
-            <div class="subtitle">Medical Temporal Graph Visualization — based on PhD research</div>
+            <div class="subtitle">Medical Temporal Graph Visualization - PhD subject</div>
           </div>
           <button class="closebtn" type="button" aria-label="Close">✕</button>
         </div>
