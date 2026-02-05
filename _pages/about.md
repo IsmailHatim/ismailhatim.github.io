@@ -1,9 +1,9 @@
 ---
 layout: test-archive
-permalink: /about
+permalink: /about/
 title: "About Me"
 redirect_from: 
-  - /about/
+  - /about
   - /about.html
 ---
 
