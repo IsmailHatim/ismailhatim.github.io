@@ -1,0 +1,6 @@
+{% include base_path %}
+
+<footer class="profile-centered__footer">
+  <p>&copy; {{ 'now' | date: "%Y" }} {{ author.name }} <a href="#" onclick="window.triggerEasterEgg(); return false;" title="GTNmed Demo">🔬</a></p>
+</footer>
+<script src="{{ base_path }}/assets/js/easter-egg.js"></script>

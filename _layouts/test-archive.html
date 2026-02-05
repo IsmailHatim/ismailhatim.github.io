@@ -1,0 +1,67 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="profile-centered-body">
+
+    <div class="profile-centered">
+      {% include header-centered.html %}
+
+      <main class="archive-centered">
+        {% if page.title %}
+          <h1 class="archive-centered__title">{{ page.title }}</h1>
+        {% endif %}
+
+        <div class="archive-centered__content">
+          {{ content }}
+        </div>
+
+        {% comment %} Optional: Auto-list collection items if specified {% endcomment %}
+        {% if page.collection %}
+          <div class="archive-centered__list">
+            {% assign collection = site[page.collection] | sort: 'date' | reverse %}
+            {% for item in collection %}
+              <article class="archive-centered__item">
+                <h3>
+                  {% if item.link %}
+                    <a href="{{ item.link }}">{{ item.title }}</a>
+                  {% elsif item.url %}
+                    <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+                  {% else %}
+                    {{ item.title }}
+                  {% endif %}
+                </h3>
+                {% if item.venue %}
+                  <p class="archive-centered__venue">{{ item.venue }}{% if item.date %}, {{ item.date | date: "%Y" }}{% endif %}</p>
+                {% elsif item.date %}
+                  <p class="archive-centered__date">{{ item.date | date: "%Y" }}</p>
+                {% endif %}
+                {% if item.excerpt %}
+                  <p class="archive-centered__excerpt">{{ item.excerpt | markdownify | strip_html | truncate: 200 }}</p>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </main>
+
+      {% include footer-centered.html %}
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

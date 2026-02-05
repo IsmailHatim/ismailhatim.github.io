@@ -1,0 +1,99 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="profile-centered-body">
+
+    <div class="profile-centered">
+      {% include header-centered.html %}
+
+      <main class="profile-centered__main">
+        <div class="profile-centered__avatar profile-centered__avatar--large">
+          {% if author.avatar contains "://" %}
+            <img src="{{ author.avatar }}" alt="{{ author.name }}">
+          {% else %}
+            <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
+          {% endif %}
+        </div>
+
+        <h1 class="profile-centered__name">{{ author.name }}</h1>
+
+        {% if author.bio %}
+          <p class="profile-centered__bio">{{ author.bio }}</p>
+        {% endif %}
+
+        {% if author.location %}
+          <p class="profile-centered__location">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            {{ author.location }}
+          </p>
+        {% endif %}
+
+        <div class="profile-centered__content">
+          {{ content }}
+        </div>
+
+        <div class="profile-centered__social">
+          {% if author.email %}
+            <a href="mailto:{{ author.email }}" title="Email" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          {% endif %}
+          {% if author.github %}
+            <a href="https://github.com/{{ author.github }}" title="GitHub" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          {% endif %}
+          {% if author.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          {% endif %}
+          {% if author.orcid %}
+            <a href="{{ author.orcid }}" title="ORCID" aria-label="ORCID">
+              <i class="ai ai-orcid"></i>
+            </a>
+          {% endif %}
+          {% if author.googlescholar %}
+            <a href="{{ author.googlescholar }}" title="Google Scholar" aria-label="Google Scholar">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          {% endif %}
+          {% if author.twitter %}
+            <a href="https://twitter.com/{{ author.twitter }}" title="Twitter" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          {% endif %}
+          {% if author.mastodon %}
+            <a href="{{ author.mastodon }}" title="Mastodon" aria-label="Mastodon">
+              <i class="fab fa-mastodon"></i>
+            </a>
+          {% endif %}
+          {% if author.bluesky %}
+            <a href="https://bsky.app/profile/{{ author.bluesky }}" title="Bluesky" aria-label="Bluesky">
+              <i class="fab fa-bluesky"></i>
+            </a>
+          {% endif %}
+        </div>
+      </main>
+
+      {% include footer-centered.html %}
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

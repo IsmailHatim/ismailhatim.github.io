@@ -1,0 +1,47 @@
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<header class="header-centered">
+  <a href="{{ base_path }}/" class="header-centered__brand">
+    <div class="header-centered__avatar">
+      {% if author.avatar contains "://" %}
+        <img src="{{ author.avatar }}" alt="{{ author.name }}">
+      {% else %}
+        <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}">
+      {% endif %}
+    </div>
+    <span class="header-centered__name">{{ author.name }}</span>
+  </a>
+
+  <nav class="header-centered__nav">
+    {% for link in site.data.navigation.main %}
+      <a href="{{ base_path }}{{ link.url }}"{% if page.url == link.url %} class="active"{% endif %}>{{ link.title }}</a>
+    {% endfor %}
+  </nav>
+
+  <button class="header-centered__theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+    <i class="fas fa-sun" id="theme-icon-light"></i>
+    <i class="fas fa-moon" id="theme-icon-dark"></i>
+  </button>
+</header>
+
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const body = document.body;
+  const stored = localStorage.getItem('theme');
+
+  if (stored === 'light') {
+    body.classList.add('light-mode');
+  }
+
+  toggle.addEventListener('click', function() {
+    body.classList.toggle('light-mode');
+    const isLight = body.classList.contains('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+})();
+</script>

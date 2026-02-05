@@ -1,7 +1,7 @@
 ---
-permalink: /
+layout: test-archive
+permalink: /about
 title: "About Me"
-author_profile: true
 redirect_from: 
   - /about/
   - /about.html
@@ -16,6 +16,9 @@ Before starting my PhD, I completed an MSc in Artificial Intelligence at **Centr
 
 More broadly, I am interested in graph representation learning, foundation models, reinforcement learning, and the optimization and theoretical principles underlying modern deep learning systems.
 
+## CV
+
+You can download the complete pdf version of my <a href = "https://ismailhatim.github.io/files/Resume_HATIM_Ismail.pdf">CV</a>.
 
 ## News
 

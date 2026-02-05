@@ -1,0 +1,85 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="profile-centered-body">
+
+    <div class="profile-centered">
+      {% include header-centered.html %}
+
+      <main class="post-centered">
+        <article class="post-centered__article">
+          <header class="post-centered__header">
+            <h1 class="post-centered__title">{{ page.title }}</h1>
+
+            <div class="post-centered__meta">
+              <span class="post-centered__date">
+                {{ page.date | date: "%d %b %Y" }}
+              </span>
+
+              {% assign words = page.content | number_of_words %}
+              {% assign minutes = words | divided_by: site.words_per_minute %}
+              {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+
+              <span class="post-centered__separator">·</span>
+              <span class="post-centered__reading">{{ minutes }} min read</span>
+
+              <span class="post-centered__separator">·</span>
+              <span class="post-centered__words">{{ words }} words</span>
+            </div>
+          </header>
+
+          <div class="post-centered__content">
+            {{ content }}
+          </div>
+
+          {% if page.tags.size > 0 %}
+            <footer class="post-centered__footer">
+              <div class="post-centered__tags">
+                {% for tag in page.tags %}
+                  <span class="post-centered__tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </footer>
+          {% endif %}
+        </article>
+
+        <nav class="post-centered__nav">
+          {% if page.previous %}
+            <a href="{{ base_path }}{{ page.previous.url }}" class="post-centered__nav-link post-centered__nav-link--prev">
+              <span class="post-centered__nav-label"><i class="fas fa-arrow-left"></i> Previous</span>
+              <span class="post-centered__nav-title">{{ page.previous.title | truncate: 40 }}</span>
+            </a>
+          {% else %}
+            <span></span>
+          {% endif %}
+
+          {% if page.next %}
+            <a href="{{ base_path }}{{ page.next.url }}" class="post-centered__nav-link post-centered__nav-link--next">
+              <span class="post-centered__nav-label">Next <i class="fas fa-arrow-right"></i></span>
+              <span class="post-centered__nav-title">{{ page.next.title | truncate: 40 }}</span>
+            </a>
+          {% endif %}
+        </nav>
+      </main>
+
+      {% include footer-centered.html %}
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
