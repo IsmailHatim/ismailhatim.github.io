@@ -1,0 +1,11 @@
+# Teaching list — rendered on /teaching/ as a flat list, in file order (put newest first).
+# To add a course, copy the sample below, uncomment it, and fill it in.
+# Required: course. Optional: role, institution, term, description, url (links the title).
+# Commenting an entry out hides it.
+
+# - course: "INF421 — Design and Analysis of Algorithms"
+#   role: "Teaching Assistant"
+#   institution: "École Polytechnique"
+#   term: "Fall 2026"
+#   description: "Led weekly exercise sessions for ~30 students; graded projects on graph algorithms."
+#   url: "https://www.polytechnique.edu/"

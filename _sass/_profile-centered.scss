@@ -889,3 +889,186 @@
     color: var(--pc-accent);
   }
 }
+
+// Publications Page
+.publications-centered {
+  flex: 1;
+  width: 100%;
+  padding: 2rem 0;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pc-text);
+    margin: 0 0 1rem;
+  }
+
+  &__description {
+    font-size: 1.05rem;
+    color: var(--pc-text-muted);
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+
+  &__year {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--pc-text);
+    border-bottom: 1px solid var(--pc-border);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1.25rem;
+  }
+
+  &__item {
+    margin-bottom: 1.75rem;
+  }
+
+  &__paper-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--pc-text);
+    margin: 0 0 0.35rem;
+  }
+
+  &__authors {
+    font-size: 0.9rem;
+    color: var(--pc-text-muted);
+    margin: 0 0 0.25rem;
+    line-height: 1.5;
+
+    strong {
+      color: var(--pc-text);
+    }
+  }
+
+  &__venue {
+    font-size: 0.9rem;
+    color: var(--pc-text-muted);
+    font-style: italic;
+    margin: 0 0 0.6rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__pill {
+    font-size: 0.75rem;
+    border: 1px solid var(--pc-border);
+    border-radius: 4px;
+    padding: 0.15rem 0.6rem;
+    color: var(--pc-accent);
+    text-decoration: none;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--pc-accent);
+    }
+
+    &--muted {
+      color: var(--pc-text-muted);
+      cursor: pointer;
+    }
+  }
+
+  &__bibtex {
+    summary {
+      list-style: none;
+      display: inline-block;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    &[open] {
+      flex-basis: 100%;
+    }
+
+    pre {
+      background: var(--pc-border);
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 0.75rem 0 0;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      color: var(--pc-text);
+    }
+  }
+
+  &__empty {
+    color: var(--pc-text-muted);
+    font-size: 1rem;
+  }
+}
+
+// Teaching Page
+.teaching-centered {
+  flex: 1;
+  width: 100%;
+  padding: 2rem 0;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pc-text);
+    margin: 0 0 1rem;
+  }
+
+  &__description {
+    font-size: 1.05rem;
+    color: var(--pc-text-muted);
+    margin: 0 0 2rem;
+    line-height: 1.6;
+  }
+
+  &__item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--pc-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__course {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--pc-text);
+    margin: 0 0 0.3rem;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--pc-accent);
+      }
+    }
+  }
+
+  &__meta {
+    font-size: 0.85rem;
+    color: var(--pc-text-muted);
+    margin: 0 0 0.4rem;
+  }
+
+  &__details {
+    font-size: 0.9rem;
+    color: var(--pc-text);
+    opacity: 0.85;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__empty {
+    color: var(--pc-text-muted);
+    font-size: 1rem;
+  }
+}

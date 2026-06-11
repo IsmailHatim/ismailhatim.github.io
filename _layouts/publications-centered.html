@@ -1,0 +1,92 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="profile-centered-body">
+
+    <div class="profile-centered">
+      {% include header-centered.html %}
+
+      <main class="publications-centered">
+        {% if page.title %}
+          <h1 class="publications-centered__title">{{ page.title }}</h1>
+        {% endif %}
+
+        {% if page.description %}
+          <p class="publications-centered__description">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="publications-centered__content">
+          {{ content }}
+        </div>
+
+        {% assign pubs = site.data.publications %}
+        {% if pubs and pubs.size > 0 %}
+          {% assign years = pubs | map: 'year' | uniq | sort | reverse %}
+          {% for year in years %}
+            <h2 class="publications-centered__year">{{ year }}</h2>
+            {% assign year_pubs = pubs | where: 'year', year %}
+            {% for pub in year_pubs %}
+              <article class="publications-centered__item">
+                <h3 class="publications-centered__paper-title">{{ pub.title }}</h3>
+
+                {% if pub.authors %}
+                  <p class="publications-centered__authors">{{ pub.authors | escape | replace: 'Ismail Hatim', '<strong>Ismail Hatim</strong>' | replace: 'I. Hatim', '<strong>I. Hatim</strong>' }}</p>
+                {% endif %}
+
+                {% if pub.venue %}
+                  <p class="publications-centered__venue">{{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}</p>
+                {% endif %}
+
+                <div class="publications-centered__links">
+                  {% if pub.doi %}
+                    <a href="{{ pub.doi }}" class="publications-centered__pill" target="_blank" rel="noopener">DOI</a>
+                  {% endif %}
+                  {% if pub.arxiv %}
+                    <a href="{{ pub.arxiv }}" class="publications-centered__pill" target="_blank" rel="noopener">arXiv</a>
+                  {% endif %}
+                  {% if pub.pdf %}
+                    {% if pub.pdf contains '://' %}
+                      <a href="{{ pub.pdf }}" class="publications-centered__pill" target="_blank" rel="noopener">PDF</a>
+                    {% else %}
+                      <a href="{{ base_path }}{{ pub.pdf }}" class="publications-centered__pill" target="_blank" rel="noopener">PDF</a>
+                    {% endif %}
+                  {% endif %}
+                  {% if pub.code %}
+                    <a href="{{ pub.code }}" class="publications-centered__pill" target="_blank" rel="noopener">Code</a>
+                  {% endif %}
+                  {% if pub.bibtex %}
+                    <details class="publications-centered__bibtex">
+                      <summary class="publications-centered__pill publications-centered__pill--muted">BibTeX</summary>
+                      <pre>{{ pub.bibtex | escape }}</pre>
+                    </details>
+                  {% endif %}
+                </div>
+              </article>
+            {% endfor %}
+          {% endfor %}
+        {% else %}
+          <p class="publications-centered__empty">Publications coming soon.</p>
+        {% endif %}
+      </main>
+
+      {% include footer-centered.html %}
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

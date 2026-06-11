@@ -1,0 +1,22 @@
+# Publications list — rendered on /publications/, grouped by year (newest first).
+# To add a paper, copy the sample below, uncomment it, and fill it in.
+# Required: title, authors (plain text), venue, year.
+# Optional: doi, arxiv, pdf, code (links — pills only appear when present),
+#           bibtex (literal block shown in an expandable "BibTeX" section).
+# Commenting an entry out hides it.
+
+# - title: "A Graph Transformer for Sparse Electronic Health Records"
+#   authors: "Ismail Hatim, Guillaume Lachaud, Benoît Gallix, Yanlei Diao"
+#   venue: "Proceedings of Some Conference"
+#   year: 2026
+#   doi: "https://doi.org/10.xxxx/xxxxx"
+#   arxiv: "https://arxiv.org/abs/xxxx.xxxxx"
+#   pdf: "/files/paper.pdf"
+#   code: "https://github.com/IsmailHatim/repo"
+#   bibtex: |
+#     @inproceedings{hatim2026graph,
+#       title={A Graph Transformer for Sparse Electronic Health Records},
+#       author={Hatim, Ismail and Lachaud, Guillaume and Gallix, Beno{\^i}t and Diao, Yanlei},
+#       booktitle={Proceedings of Some Conference},
+#       year={2026}
+#     }

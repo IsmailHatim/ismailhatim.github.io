@@ -1,0 +1,74 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="profile-centered-body">
+
+    <div class="profile-centered">
+      {% include header-centered.html %}
+
+      <main class="teaching-centered">
+        {% if page.title %}
+          <h1 class="teaching-centered__title">{{ page.title }}</h1>
+        {% endif %}
+
+        {% if page.description %}
+          <p class="teaching-centered__description">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="teaching-centered__content">
+          {{ content }}
+        </div>
+
+        {% assign entries = site.data.teaching %}
+        {% if entries and entries.size > 0 %}
+          <div class="teaching-centered__list">
+            {% for entry in entries %}
+              <article class="teaching-centered__item">
+                <h2 class="teaching-centered__course">
+                  {% if entry.url %}
+                    <a href="{{ entry.url }}" target="_blank" rel="noopener">{{ entry.course }}</a>
+                  {% else %}
+                    {{ entry.course }}
+                  {% endif %}
+                </h2>
+
+                {% assign meta_parts = "" | split: "" %}
+                {% if entry.role %}{% assign meta_parts = meta_parts | push: entry.role %}{% endif %}
+                {% if entry.institution %}{% assign meta_parts = meta_parts | push: entry.institution %}{% endif %}
+                {% if entry.term %}{% assign meta_parts = meta_parts | push: entry.term %}{% endif %}
+                {% if meta_parts.size > 0 %}
+                  <p class="teaching-centered__meta">{{ meta_parts | join: " · " }}</p>
+                {% endif %}
+
+                {% if entry.description %}
+                  <p class="teaching-centered__details">{{ entry.description }}</p>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="teaching-centered__empty">Teaching activities coming soon.</p>
+        {% endif %}
+      </main>
+
+      {% include footer-centered.html %}
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

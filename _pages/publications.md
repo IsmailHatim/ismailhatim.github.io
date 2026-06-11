@@ -1,12 +1,8 @@
 ---
-layout: archive-centered
+layout: publications-centered
 title: "Publications"
 permalink: /publications/
-author_profile: true
+description: "My research publications and preprints."
 redirect_from:
   - /publications.html
 ---
-
-## 2026
-
-**Under Construction...**
