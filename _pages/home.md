@@ -2,7 +2,6 @@
 layout: profile-centered
 permalink: /
 author_profile: true
-title: "Ismail Hatim"
 ---
 
 Welcome, I’m Ismail Hatim. 

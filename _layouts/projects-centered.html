@@ -1,0 +1,82 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="profile-centered-body">
+
+    <div class="profile-centered">
+      {% include header-centered.html %}
+
+      <main class="blog-centered">
+        {% if page.title %}
+          <h1 class="blog-centered__title">{{ page.title }}</h1>
+        {% endif %}
+
+        {% if page.description %}
+          <p class="blog-centered__description">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="blog-centered__content">
+          {{ content }}
+        </div>
+
+        <div class="blog-centered__list">
+          {% comment %} Jekyll defaults a doc's date to site.time when front matter has none, so "undated" means nil OR site.time; where_exp can't take compound conditions in Jekyll 3 {% endcomment %}
+          {% assign dated_projects = site.projects | where_exp: 'project', 'project.date != nil' | where_exp: 'project', 'project.date != site.time' | sort: 'date' | reverse %}
+          {% assign undated_nil = site.projects | where_exp: 'project', 'project.date == nil' %}
+          {% assign undated_fallback = site.projects | where_exp: 'project', 'project.date == site.time' %}
+          {% assign undated_projects = undated_nil | concat: undated_fallback %}
+          {% assign projects = dated_projects | concat: undated_projects %}
+          {% if projects.size == 0 %}
+            <p class="blog-centered__empty">No projects yet — coming soon.</p>
+          {% endif %}
+          {% for project in projects %}
+            <article class="blog-centered__item">
+              <a href="{{ base_path }}{{ project.url }}" class="blog-centered__item-link">
+                <h2 class="blog-centered__item-title">{{ project.title }}</h2>
+              </a>
+
+              {% if project.description %}
+                <p class="blog-centered__item-excerpt">{{ project.description }}</p>
+              {% endif %}
+
+              <div class="blog-centered__item-meta">
+                {% if project.language %}
+                  <span><i class="fas fa-code"></i>{{ project.language }}</span>
+                {% endif %}
+
+                {% if project.date and project.date != site.time %}
+                  <span><i class="fas fa-calendar-alt"></i>{{ project.date | date: "%d %b %Y" }}</span>
+                {% endif %}
+
+                {% if project.github %}
+                  <a href="{{ project.github }}" class="blog-centered__item-github" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>GitHub
+                  </a>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </main>
+
+      {% include footer-centered.html %}
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>

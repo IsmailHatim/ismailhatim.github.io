@@ -35,6 +35,9 @@ layout: compress
 
         <div class="blog-centered__list">
           {% assign posts = site.posts | sort: 'date' | reverse %}
+          {% if posts.size == 0 %}
+            <p class="blog-centered__empty">No posts yet — coming soon.</p>
+          {% endif %}
           {% for post in posts %}
             <article class="blog-centered__item">
               <a href="{{ base_path }}{{ post.url }}" class="blog-centered__item-link">

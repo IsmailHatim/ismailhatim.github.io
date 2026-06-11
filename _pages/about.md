@@ -1,5 +1,5 @@
 ---
-layout: test-archive
+layout: archive-centered
 permalink: /about/
 title: "About Me"
 redirect_from: 

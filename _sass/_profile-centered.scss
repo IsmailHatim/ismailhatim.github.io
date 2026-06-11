@@ -7,9 +7,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--pc-border);
   margin-bottom: 1rem;
+
+  // Let the header bar extend beyond the 700px content column on wide screens
+  @media (min-width: 950px) {
+    margin-left: -90px;
+    margin-right: -90px;
+  }
 
   &__brand {
     display: flex;
@@ -516,6 +523,21 @@
     border-radius: 3px;
     transition: background-color 0.2s ease;
   }
+
+  &__item-github {
+    color: var(--pc-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--pc-accent);
+    }
+  }
+
+  &__empty {
+    color: var(--pc-text-muted);
+    font-size: 1rem;
+  }
 }
 
 // Post Centered Layout
@@ -845,5 +867,25 @@
         text-align: left;
       }
     }
+  }
+}
+
+// Projects Section
+.project-github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--pc-border);
+  border-radius: 6px;
+  color: var(--pc-text);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    border-color: var(--pc-accent);
+    color: var(--pc-accent);
   }
 }

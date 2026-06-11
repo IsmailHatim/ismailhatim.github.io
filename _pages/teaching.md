@@ -1,5 +1,5 @@
 ---
-layout: test-archive
+layout: archive-centered
 title: "Teaching"
 permalink: /teaching/
 redirect_from:

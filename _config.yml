@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Ismail Hatim"
 title_separator          : "-"
 name                     : &name "Ismail Hatim"
-description              : &description "personal description"
+description              : &description "PhD student at École Polytechnique (LIX, Inria) working on graph machine learning and foundation models for electronic health records."
 url                      : https://ismailhatim.com # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "IsmailHatim/ismailhatim.github.io"
@@ -135,7 +135,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : "profile_new.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -224,6 +224,9 @@ collections:
   talks:
     output: false
     permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -264,6 +267,12 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project-centered
   # _portfolio
   # - scope:
   #     path: ""
