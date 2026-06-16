@@ -122,8 +122,8 @@ atom_feed:
 
 
 # SEO Related
-google_site_verification :
-bing_site_verification   :
+google_site_verification : "GfZyiH78wlLYyArdSbc5c9L54jq2ZcZGnFf0v_Xe-WM"
+bing_site_verification   : "15D765B027C6D8BC42D053E16A609058"
 alexa_site_verification  :
 yandex_site_verification :
 
@@ -139,9 +139,12 @@ og_image                 : "profile_new.jpg" # Open Graph/Twitter default site i
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : "Person" # Person or Organization (defaults to Person)
+  name                   : "Ismail Hatim" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://github.com/IsmailHatim"
+    - "https://www.linkedin.com/in/ismail-hatim-b1a666197"
+    - "https://orcid.org/0009-0005-6815-9856"
 
 
 # Analytics
